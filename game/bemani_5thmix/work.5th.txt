@@ -1,0 +1,284 @@
+WORK.5TH
+|   5THMAKE.TXT
+|   BM.CPE
+|   BM.LNK
+|   BM.MAP
+|   MAKEFILE
+|   MAKEFILE.A
+|   MAKEFILE.M
+|   OBJLIST.TXT
+|   OPTIONS
+|   README.TXT
+|   UPDATE.TXT
+|   
++---APPEND
+|       2ND.BIN
+|       APPEND.C
+|       APPEND.CPE
+|       APPEND.EXE
+|       APPEND.LNK
+|       APPEND.MAP
+|       APPEND.SYM
+|       APP_HEAD.BIN
+|       BM_ADDR.H
+|       BM_APP.BIN
+|       BM_APP2.BIN
+|       BM_BIN.S
+|       BM_COMP.EXE
+|       CHKPS.BIN
+|       CHKPS.LZS
+|       CHKPS.PAK
+|       CHK_SUB.C
+|       CONV2.EXE
+|       CONV2PAK.EXE
+|       DECODE.C
+|       GO.BAT
+|       LOAD_MSG.BIN
+|       LZSS.EXE
+|       MAKEFILE
+|       MASTER.EXE
+|       MEM_FUNC.C
+|       MEM_FUNC.H
+|       NEWTYPES.H
+|       
++---AWK
+|       MAP2LIB.AWK
+|       MKLNK.AWK
+|       MKSTAGE.AWK
+|       STAGELST.AWK
+|       
++---CDROM.IMG
+|       BMDATA.PAK
+|       SYSDATA.PAK
+|       
++---DBGSTR
+|       CTRL.C
+|       CTRL.O
+|       CTRL.OBJ
+|       CTRL_D~1.H
+|       EVENT.C
+|       EVENT.O
+|       EVENT.OBJ
+|       EVENT_~1.H
+|       FSCD.C
+|       FSCD.O
+|       FSCD.OBJ
+|       FSCD_D~1.H
+|       GM_NOTE.C
+|       GM_NOTE.O
+|       GM_NOTE.OBJ
+|       MAKEFILE
+|       MOPTIONS
+|       NOTE_D~1.H
+|       OBJMAIN.C
+|       OBJMAIN.O
+|       OBJMAIN.OBJ
+|       OBJM_D~1.H
+|       OPTIONS
+|       SRNDRAW.C
+|       SRNDRAW.O
+|       SRNDRAW.OBJ
+|       SRNDRA~1.H
+|       SRNLOAD.C
+|       SRNLOAD.O
+|       SRNLOAD.OBJ
+|       SRNLOA~1.H
+|       SRNMAIN.C
+|       SRNMAIN.O
+|       SRNMAIN.OBJ
+|       SRNMAI~1.H
+|       TMPLNK.TXT
+|       TMPLNK_M.TXT
+|       TOOL.C
+|       TOOL.O
+|       TOOL.OBJ
+|       TOOL_D~1.H
+|       
++---DOC
+|       HOW_TO~1.DOC
+|       POINT.DOC
+|       
++---INCLUDE
+|       BMDATNEW.H
+|       BM_ALL.H
+|       BM_STRU.H
+|       EQU.H
+|       EVENT.H
+|       EXT.H
+|       GAME.H
+|       GM_DEF.H
+|       ISIO.H
+|       MTS.H
+|       OBJDEF.H
+|       OBJ_MN00.H
+|       SCENE.H
+|       SD_CLI.H
+|       SYS5TH.H
+|       SYSTEMBG.H
+|       SYS_ADDR.H
+|       TASK_ID.H
+|       W_SIZE.H
+|       XAID.H
+|       
++---LIB
+|       DBGSTR.LIB
+|       DBGSTR_M.LIB
+|       LIBBM.LIB
+|       LIBDM.LIB
+|       LIBFS.LIB
+|       LIBMC.LIB
+|       LIBOBJ.LIB
+|       LIBSRN.LIB
+|       MIYA.LIB
+|       MTS.LIB
+|       MTSCD.LIB
+|       MTSMCD.LIB
+|       MTS_DBG.LIB
+|       NOLIBSIO.LIB
+|       SIO.LIB
+|       SOUND.LIB
+|       TAN.LIB
+|       
++---LIBBM
+|       BMPAD.C
+|       BMPAD.OBJ
+|       BMPAD_A.C
+|       BMPAD_A.H
+|       BMPAD_A.OBJ
+|       DEMO.C
+|       DEMO.H
+|       DEMO.OBJ
+|       DJLEVEL.C
+|       DJLEVEL.OBJ
+|       ENDING.C
+|       ENDING.OBJ
+|       GAGE.C
+|       GAGE.OBJ
+|       HIGH.C
+|       HIGH.H
+|       HIGH.OBJ
+|       ISIN.C
+|       ISIN.OBJ
+|       JLOGO.C
+|       JLOGO.OBJ
+|       LIBBM.H
+|       LIBBMLNK.TXT
+|       MAKEFILE
+|       NAME.C
+|       NAME.H
+|       NAME.OBJ
+|       OPTION.C
+|       OPTION.H
+|       OPTION.OBJ
+|       OPTSEL.C
+|       OPTSEL.H
+|       OPTSEL.OBJ
+|       RESULT.C
+|       RESULT.H
+|       RESULT.OBJ
+|       SRN.H
+|       STORY.C
+|       STORY.H
+|       STORY.OBJ
+|       TITLE.C
+|       TITLE.OBJ
+|       TRANING.C
+|       TRANING.H
+|       TRANING.OBJ
+|       
++---LIBFS
+|       FILE.CNF
+|       FSCD.C
+|       FSCD.OBJ
+|       FSCONF.H
+|       FSHD.C
+|       FSHD.OBJ
+|       FSMAIN.C
+|       FSMAIN.OBJ
+|       LIBFS.H
+|       MAKEFILE
+|       MOVIESYS.C
+|       MOVIESYS.OBJ
+|       TASKID.H
+|       
++---LIBMC
+|       BM_CARD.C
+|       BM_CARD.H
+|       BM_CARD.OBJ
+|       LIBMC.H
+|       MAKEFILE
+|       MCARD.C
+|       MCARD.OBJ
+|       
++---LIBSRN
+|       BM_PRI.H
+|       BZERO.C
+|       BZERO.OBJ
+|       DISPINIT.C
+|       DISPINIT.OBJ
+|       DISPINT.C
+|       DISPINT.OBJ
+|       DISPLINK.TXT
+|       DISPSAVE.C
+|       DISPSUB.C
+|       DISPSUB.OBJ
+|       LIBCOLOR.C
+|       LIBCOLOR.H
+|       LIBCOLOR.OBJ
+|       LIBDISP.H
+|       LIBOBJ.H
+|       LIBSRN.H
+|       MAKEFILE
+|       OBJMAIN.C
+|       OBJMAIN.OBJ
+|       OBJTXT.C
+|       OBJTXT.OBJ
+|       OPDTABLE.H
+|       SRNDRAW.C
+|       SRNDRAW.OBJ
+|       SRNLOAD.C
+|       SRNLOAD.OBJ
+|       SRNMAIN.C
+|       SRNMAIN.OBJ
+|       SRNMAKE.C
+|       TEXTOBJ.H
+|       
++---MAIN
+|       BM.C
+|       BM.OBJ
+|       
+\---TAN
+        CTRL.C
+        CTRL.OBJ
+        CTRL_EXP.C
+        CTRL_FRE.C
+        CTRL_SUB.C
+        CTRL_SUB.OBJ
+        CTRL_SUV.C
+        C_WORK.C
+        C_WORK.OBJ
+        EVENT.C
+        EVENT.OBJ
+        GM_GAME.C
+        GM_GAME.OBJ
+        GM_NOTE.C
+        GM_NOTE.OBJ
+        IR_ERR.C
+        IR_ERR.OBJ
+        IR_MODE.C
+        IR_MODE.H
+        IR_MODE.OBJ
+        JUDGE.C
+        JUDGE.OBJ
+        MAKEFILE
+        MCHDATA.C
+        MCHDATA.OBJ
+        PASSWORD.H
+        SCENE.C
+        SCENE.OBJ
+        STGDAT.C
+        STGDAT.OBJ
+        TABLE.H
+        TOOL.C
+        TOOL.OBJ
+        

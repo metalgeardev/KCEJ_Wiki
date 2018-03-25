@@ -41,7 +41,7 @@ Note: Texture archives (.qar files) are prefixed with "@".
 Note: Unlike MGS1, the sound packages (.sdx) are not listed.
 
 ### Metal Gear Solid: The Twin Snakes
-Sample: [shared\stage\preview\data.cnf](sample/mgstts/preview.cnf)
+Sample: [shared/stage/preview/data.cnf](sample/mgstts/preview.cnf)
 
 | flag | data |
 | ----- | ----- |
@@ -55,9 +55,9 @@ Sample: [USRDIR/stage/r_main01/_zar/data.cnf](sample/mpo/r_main01.cnf) (MPO)
 
 Sample: [USRDIR/stage/st01/_zar/data.cnf](sample/mpo/st01.cnf) (MPO)
 
-Sample: [USRDIR/STAGE.PDT/r_main01/data.cnf](sample/mgspw/r_main01.cnf) (MGSPW)
+Sample: [USRDIR/STAGEDAT.PDT/r_main01/data.cnf](sample/mgspw/r_main01.cnf) (MGSPW)
 
-Sample: [USRDIR/STAGE.PDT/w00s01a/w00s01a.cnf](sample/mgspw/w00s01a.cnf) (MGSPW)
+Sample: [USRDIR/STAGEDAT.PDT/w00s01a/w00s01a.cnf](sample/mgspw/w00s01a.cnf) (MGSPW)
 
 | flag | data |
 | ----- | ----- |

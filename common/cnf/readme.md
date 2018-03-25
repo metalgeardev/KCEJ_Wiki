@@ -7,11 +7,11 @@ Data configuration files (data.cnf) are used by derivatives of the MGS engine to
 Lines beginning with a single period (".resident", for example) are used to set flags regarding into which portion of memory the following files are to be loaded.
 
 ### Metal Gear Solid: Integral (Windows)
-Sample: [stage.mgz/init/data.cnf](sample/mgs_pc/init.cnf)
+Sample: [stage.mgz/stage/init/data.cnf](sample/mgs_pc/init.cnf)
 
-Sample: [stage.mgz/s00a/data.cnf](sample/mgs_pc/s00a.cnf)
+Sample: [stage.mgz/stage/s00a/data.cnf](sample/mgs_pc/s00a.cnf)
 
-Sample: [stage.mgz/s01a/data.cnf](sample/mgs_pc/s01a.cnf)
+Sample: [stage.mgz/stage/s01a/data.cnf](sample/mgs_pc/s01a.cnf)
 
 | flag | data |
 | ----- | ----- |

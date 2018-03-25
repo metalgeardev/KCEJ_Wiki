@@ -57,7 +57,7 @@ Sample: [USRDIR/stage/st01/_zar/data.cnf](sample/mpo/st01.cnf) (MPO)
 
 Sample: [USRDIR/STAGEDAT.PDT/r_main01/data.cnf](sample/mgspw/r_main01.cnf) (MGSPW)
 
-Sample: [USRDIR/STAGEDAT.PDT/w00s01a/w00s01a.cnf](sample/mgspw/w00s01a.cnf) (MGSPW)
+Sample: [USRDIR/STAGEDAT.PDT/w00s01a/data.cnf](sample/mgspw/w00s01a.cnf) (MGSPW)
 
 | flag | data |
 | ----- | ----- |

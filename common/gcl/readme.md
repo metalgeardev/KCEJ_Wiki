@@ -3,106 +3,23 @@
 ## Description
 Game Command Language (GCL) is a scripting language developed by KCE Japan West for Metal Gear Solid. GCL is compiled to bytecode and relies on an interpreter library (LibGCL) in the system program. Tcl was used for reference when designing the language.
 
-## Syntax examples
-Identifiers written in Japanese are accepted. Comments are handled the same as in C/C++, as well as with the # character for a single-line comment.
+## Details & Syntax examples
+The language was designed with the use of Japanese identifiers in mind, as the members of the script unit found it easier to work in their native language.
 
-### Metal Gear Solid 2: Sons of Liberty
-```
-chara ドア DoorA1 \
-	-kms std_door \
-	-position 9325,0,-5050 \
-	-rotate 0,2048,0
+GCL is statically typed, as dynamic typing is prone to creating bugs in the hands of the script unit, which mainly consisted of non-programmers (e.g. game designers and planners).
 
-trap DoorA1_Area スネーク \
-	-mask 入る \
-	-exec {
-		mesg ドア DoorA1 open
-	}
-```
-### Metal Gear Solid 4: Guns of the Patriots
-```
-/******************************************************************************************/
-proc ライト設定 {
-	#if d:vardef::DEBUG_PRINT
-		print '*** Light setting *** @ライト設定';
-	#endif
+Comments are handled the same as in C/C++, as well as with the ``#`` character for a single-line comment.
 
-	command フォグ設定 \
-//		-near	-5000			\	//command フォグ設定
-//		-far	170000			\	//command フォグ設定
-//		-light	0 337			\	//command フォグ設定
-//		-rgb	188 635 811		\	//command フォグ設定
-//		-before_near 1000 \
-//		-before_far 100000 \
-//		-before_rbg 1000 1000 784 \
-//		-before_limit 1 500
-		-rgb 290 376 313	\	//command フォグ設定
-		-near -15000		\	//command フォグ設定
-		-far 324700			\	//command フォグ設定
-		-limit 0 392			//command フォグ設定
+GCL supports C-like preprocessor directives.
 
-	command ライト設定 \
-//		-dir				-1016 -2377 -4279	\	// command ライト設定
-//		-color				1388 372 0		\	// command ライト設定
-//		-chara_color			2870 372 0		\	// command ライト設定
-//		-hemispherelight_dir		609 -4921 641		\	// command ライト設定
-//		-hemispherelight_frontcolor	149 227 188 784		\	// command ライト設定
-//		-hemispherelight_backcolor	15 74 94 784			// command ライト設定
-		-dir -1668 -2356 -4082					\	// command ライト設定
-		-color 1803 1803 1803					\	// command ライト設定
-		-chara_color 815 815 815				\	// command ライト設定
-		-hemispherelight_dir 609 -4921 641			\	// command ライト設定
-		-hemispherelight_frontcolor 86 86 86 1372	\	// command ライト設定
-		-hemispherelight_backcolor 62 62 62 1176			// command ライト設定
-}
+Source files use EUC-JP encoding. This must be kept standard across files; if different encodings are used, the hash of what may appear to have been the same string will not match.
 
-
-/******************************************************************************************/
-//	Proc name	: エフェクト設定
-//	In value	:
-//				:
-//	Out value	:
-//
-/******************************************************************************************/
-//	How to USE	:
-//				:
-/******************************************************************************************/
-```
-
-Note: This example may contain errors as it was copied by hand from a slightly blurry screen. ([Image 1](mgs4_excerpt1a.png)) ([Image 2](mgs4_excerpt1b.png))
-
-```
-// ステージ内のオブジェクトやエフェクトの設定や条件による
-// 設定の変更をするサンプル
- 
-// ステージの設置
-chara ステージ設置 ステージモデル \
-	-pos 0,0,0 -model d:ステージモデル名
- 
-// 細かいオブジェクトの設置するプロシージャを呼び出す
-@ステージオブジェクト設置処理
- 
-// エフェクトの起動するプロシージャを呼び出す
-if ( $i:時間帯 == d:時間帯:朝 ){
-	@ステージエフェクト_朝_起動処理
-} else if ( $i:朝昼夜 == d:時間帯:昼 ){
-	@ステージエフェクト_昼_起動処理
-} else {
-	@ステージエフェクト_夜_起動処理
-}
-```
-```
-// プレイヤーキャラの定義
-chara プレイヤー[NewPlayer] $s:名前 \
-	-model $s:モデル名<model> \
-	-motion $s:モーション名<motion> \
-	…
-```
+See the [examples](examples.md) page for excerpts from various games.
 
 ## Compilation
 An in-house tool was developed for compiling GCL scripts. The tool for MGS1 was named "GCLCONV" and was written by lead programmer Kazunobu Uehara.
 
-The compiled files will be named "__scenerio.gcx__" and sorted into the proper stage. There can also be additional GCX files in a given stage. In MGS1, the demo theater sequence loads "__demo.gcx__", and MGS2's boss rush mode loads "__boss.gcx__".
+The compiled files will be named "__scenerio.gcx__" and sorted into the proper stage. There can also be additional GCX files in a given stage. In MGS1, the demo theater sequence executes "__demo.gcx__", and MGS2's boss rush mode executes "__boss.gcx__".
 
 __RADIO.DAT__ in MGS1 and __CODEC.DAT__ in following games contain GCX scripts concatenated into a streaming-type DAT archive.
 
@@ -117,9 +34,9 @@ The interpreter library is named LibSCN.
 ## GCX format description
 
 ### Timestamp
-The first four bytes of each GCX script (excluding MGS1) are a Unix hexadecimal timestamp in little endian format. All scripts for a given build of a game in both __stage__ and __codec__ share the same timestamp.
+The first four bytes of each GCX script (excluding MGS1) are a Unix hexadecimal timestamp in little endian byte order. All scripts for a given build of a game in both __stage__ and __codec__ share the same timestamp.
 
-Convert it to big endian and input it into a [conversion tool](https://www.epochconverter.com/hex) to see when the scripts were compiled.
+Convert to big endian and input it into a [conversion tool](https://www.epochconverter.com/hex) to see when the scripts were compiled.
 
 ### Date Table
 
@@ -130,7 +47,7 @@ Convert it to big endian and input it into a [conversion tool](https://www.epoch
 | E18D343A | MGS2 Trial Edition | SLED-50117 | December 11, 2000 8:18:41 AM |
 | 7191B23B | MGS2 Sons of Liberty | SLUS-20144 | September 27, 2001 2:39:45 AM |
 | 33F8C43B | MGS2 Sons of Liberty | SLPM-65078 | October 11, 2001 1:38:59 AM |
-| ? | MGS2 Sons of Liberty | EU, English/French/German |  |
+| ? | MGS2 Sons of Liberty | SLES-50383, En/Fr/De |  |
 | ? | MGS2 Sons of Liberty | EU, Italian |  |
 | ? | MGS2 Sons of Liberty | EU, Spanish |  |
 | ? | MGS2 Sons of Liberty | SLPM-67515, Korean |  |

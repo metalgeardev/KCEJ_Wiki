@@ -1,5 +1,0 @@
-// プレイヤーキャラの定義
-chara プレイヤー[NewPlayer] $s:名前 \
-	-model $s:モデル名<model> \
-	-motion $s:モーション名<motion> \
-	…
